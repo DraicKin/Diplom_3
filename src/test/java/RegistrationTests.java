@@ -14,7 +14,7 @@ public class RegistrationTests extends BaseTest{
 
     User user = UserGenerator.getRandom();
     @Before
-    public void init() { //PUBLIC?
+    public void init() {
         driver.get("https://stellarburgers.nomoreparties.site/register");
     }
 

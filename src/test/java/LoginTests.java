@@ -14,7 +14,7 @@ import static java.net.HttpURLConnection.HTTP_OK;
 public class LoginTests extends BaseTest{
     private User user;
     @Before
-    public void init() { //PUBLIC?
+    public void init() {
         user = UserGenerator.getRandom();
         String URI = "https://stellarburgers.nomoreparties.site/api/auth/";
         given()

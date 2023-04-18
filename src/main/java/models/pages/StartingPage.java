@@ -14,9 +14,7 @@ public class StartingPage {
     private By sousButton = By.xpath(".//span[text()='Соусы']/parent::div");
     private By nachinkiButton = By.xpath(".//span[text()='Начинки']/parent::div");
 
-    private By bulkiHeader = By.xpath(".//h2[text()='Булки']");
-    private By sousHeader = By.xpath(".//h2[text()='Соусы']");
-    private By nachinkiHeader = By.xpath(".//h2[text()='Начинки']");
+    private By currentHeader = By.xpath(".//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span");
     public StartingPage(WebDriver driver){
         this.driver = driver;
     }
@@ -41,15 +39,8 @@ public class StartingPage {
         driver.findElement(nachinkiButton).click();
     }
 
-    public By getBulkiHeader() {
-        return bulkiHeader;
+    public String getCurrentHeader() {
+        return driver.findElement(currentHeader).getText();
     }
 
-    public By getSousHeader() {
-        return sousHeader;
-    }
-
-    public By getNachinkiHeader() {
-        return nachinkiHeader;
-    }
 }
